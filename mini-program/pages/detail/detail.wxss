@@ -1,0 +1,9 @@
+.container-detail { padding-bottom: 60px; }
+.goods-img { width: 100%; height: 250px; }
+.info { padding: 15px; border-bottom: 10px solid #eee; }
+.title { font-size: 18px; font-weight: bold; display: block; }
+.price { color: red; font-size: 20px; display: block; margin-top: 10px; }
+.stock { color: #999; font-size: 14px; }
+.detail { padding: 15px; }
+.bottom-bar { position: fixed; bottom: 0; width: 100%; display: flex; }
+.bottom-bar button { flex: 1; border-radius: 0; }

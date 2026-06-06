@@ -1,0 +1,23 @@
+<view class="order-list">
+  <block wx:if="{{orders.length > 0}}">
+    <view class="order-item" wx:for="{{orders}}" wx:key="id">
+      <view class="header">
+        <text>订单号: {{item.order_no}}</text>
+        <text class="status">{{statusMap[item.status]}}</text>
+      </view>
+      <view class="goods-list">
+        <view class="goods-item" wx:for="{{item.goods_info}}" wx:for-item="g" wx:key="id">
+          <image src="{{g.cover}}"></image>
+          <view class="info">
+            <text>{{g.name}}</text>
+            <text>x{{g.num}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="footer">
+        <text>总计: ￥{{item.total_price}}</text>
+      </view>
+    </view>
+  </block>
+  <view wx:else class="empty">暂无订单</view>
+</view>
