@@ -1,0 +1,23 @@
+<view class="cart-list">
+  <block wx:if="{{cart.length > 0}}">
+    <view class="cart-item" wx:for="{{cart}}" wx:key="id">
+      <checkbox checked="{{item.checked}}" bindtap="toggleCheck" data-index="{{index}}"></checkbox>
+      <image src="{{item.cover}}"></image>
+      <view class="info">
+        <text class="name">{{item.name}}</text>
+        <text class="price">￥{{item.price}}</text>
+        <view class="num-ctrl">
+          <button size="mini" bindtap="decNum" data-index="{{index}}">-</button>
+          <text>{{item.num}}</text>
+          <button size="mini" bindtap="incNum" data-index="{{index}}">+</button>
+        </view>
+      </view>
+    </view>
+    
+    <view class="bottom-bar">
+      <text>总价: ￥{{totalPrice}}</text>
+      <button type="warn" bindtap="submitOrder">去结算</button>
+    </view>
+  </block>
+  <view wx:else class="empty">购物车为空</view>
+</view>

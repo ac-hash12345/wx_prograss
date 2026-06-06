@@ -1,0 +1,16 @@
+<view class="container-user">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button bindtap="getUserProfile">微信登录</button>
+    </block>
+    <block wx:else>
+      <image class="avatar" src="{{userInfo.avatar}}"></image>
+      <text class="nickname">{{userInfo.nickname}}</text>
+    </block>
+  </view>
+  
+  <view class="menu">
+    <navigator url="/pages/order/order" class="menu-item">我的订单</navigator>
+    <view class="menu-item" bindtap="logout">退出登录</view>
+  </view>
+</view>

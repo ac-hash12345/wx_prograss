@@ -1,0 +1,6 @@
+.search { padding: 10px; background: #eee; margin: 10px; border-radius: 5px; }
+.slide-image { width: 100%; height: 150px; }
+.goods-list { display: flex; flex-wrap: wrap; padding: 10px; }
+.goods-item { width: 48%; margin: 1%; display: flex; flex-direction: column; }
+.goods-item image { width: 100%; height: 150px; }
+.price { color: red; font-size: 16px; }
